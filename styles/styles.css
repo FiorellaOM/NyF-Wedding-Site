@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --primary:rgb(94,79,103);
+    --secondary:rgb(123,198,153);
+    --primary-dark:rgb(50, 38, 57);
+}
+
+.primary {
+    color: rgb(94,79,103);
+}
+
+.secondary {
+    color: rgb(123,198,153);
+}
+
+.primary-dark {
+    color: rgb(50, 38, 57);
+}
+
+body {
+    background: rgb(94,79,103);
+    background: url("./../assets/svg/bg.svg"), linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%);
+    background-size: cover;
+    background-repeat: none;
+}
+
+main {
+    margin: 0 4rem;
+    background: var(--primary-dark);
+    min-height: 75vh;
+}
+
+/* Header ///////////////////////////////////////*/
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+    font-size: 1.5em;
+    padding: 1.5rem;
+}
+
+.navbar-light .navbar-nav .nav-link.active{
+    color: var(--secondary);
+}
+
+/* Main ///////////////////////////////////////*/
+
+.nyf {
+    height: auto;
+    width: 14em;
+}
+
+.nyfLogo {
+    height: 3rem;
+    width: auto;
+    margin: 2rem;
+}
+
+.dibujo {
+    height: auto;
+    width: 40rem;
+}
+
+.fotosGrid {
+    height: 70vh;
+    width: 75vw;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    grid-template-areas: 
+    "pic1 pic2 pic3"
+    "pic1 pic4 pic4";
+    margin: auto;
+    margin-bottom: 5rem;
+}
+
+.pic {
+    border: solid 2px white;
+}
+
+.pic1 {
+    grid-area: pic1;
+    background-image: url("../assets/img/pic1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.pic2 {
+    grid-area: pic2;
+    background-image: url("../assets/img/pic2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.pic3 {
+    grid-area: pic3;
+    background-image: url("../assets/img/pic3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.pic4 {
+    grid-area: pic4;
+    background-image: url("../assets/img/pic4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.homeText {
+    padding: 8rem;
+    text-align: center;
+    font-size: small;
+}
+
+.homeText h2 {
+    font-family: 'Ms Madi', cursive;
+    font-size: 2.5em;
+    color: var(--primary);
+}
+/* Footer ///////////////////////////////////////*/
+
+footer {
+    color: var(--primary);
+    background-color: var(--primary-dark);
+}
+
+footer h3 {
+    font-family: 'Ms Madi', cursive;
+    font-size: 2.5em;
+}
+
+footer .flower {
+    height: 2.5em;
+    width: auto;
+}
+
+/* Boda ////////////////////////////////////////*/
+
+main .bodaCont {
+    min-height: 100%;
+}
+
+.bodaCont section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#carouselFade {
+    width: 70%;
+    height: auto;
+    margin: 3rem;
+    margin-top: 5rem;
+    max-width: 1200px;
+}
+
+.bodaTitle {
+    font-family: 'Ms Madi', cursive;
+    font-size: 3.5em;
+    color: var(--secondary);
+}
+
+.navbar-light .navbar-toggler {
+    border: none;
+    fill: var(--secondary);
+    border-radius: 100%;
+    padding: 1rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Lugar ////////////////////////////////////////*/
+
+
+.map {
+    width:  100%;
+    height: 75vh;
+    padding: 2rem;
+}
+
+.map button {
+    display: none !important;
+}
+
+.map li {
+    display: none !important;
+}
+
+.marker {
+    height: 5rem;
+    width: 5rem;
+}
+
+/* Media Queries ////////////////////////////////////////*/
+
+
+@media (max-width: 600px) {
+    .fotosGrid {
+        height: 80rem;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "pic1"
+            "pic2"
+            "pic3"
+            "pic4";
+    }
+
+    #carouselFade {
+        width: 100%;
+        margin: 0;
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+    }
+}
